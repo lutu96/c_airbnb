@@ -32,6 +32,7 @@ const RightWrapper = styled.div`
     }
 
     .profile {
+        position: relative;
         display: flex;
         align-items: center;
         padding: 5px 5px 5px 12px;
@@ -45,6 +46,35 @@ const RightWrapper = styled.div`
         .avatar {
             color: #717171;
             margin-left: 12px;
+        }
+
+        .panel {
+            position: absolute;
+            top: 54px;
+            right: 0;
+            width: 240px;
+            border-radius: 10px;
+            box-shadow: 0 0 6px rgba(0,0,0,.2);
+            color: #444;
+            .top, .bottom {
+                padding: 10px 0;
+            }
+            .top {
+                border-bottom: 1px solid #ddd;
+            }
+            .item {
+                height: 40px;
+                line-height: 40px;
+                padding: 0 16px;
+                cursor: pointer;
+                &.register {
+                    color: #333;
+                    font-weight: 500;
+                }
+                &:hover {
+                    background-color: #eee;
+                }
+            }
         }
     }
 `

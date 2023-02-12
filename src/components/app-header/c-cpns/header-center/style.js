@@ -16,6 +16,7 @@ const CenterWrapper = styled.div`
         .placeholder {
             flex: 1 1 auto;
             padding: 0 16px;
+            font-weight: 600;
         }
 
         .search-icon {
