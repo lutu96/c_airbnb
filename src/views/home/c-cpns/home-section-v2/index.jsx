@@ -3,6 +3,7 @@ import React, { memo, useState, useCallback } from 'react'
 import SectionHeader from '@/components/section-header'
 import SectionRooms from '@/components/section-rooms'
 import SectionTabs from '@/components/setction-tabs'
+import SectionFooter from '@/components/section-footer'
 import { SectionV2Wrapper } from './style'
 
 
@@ -23,6 +24,7 @@ const tabClickHandle = useCallback((name, index) => {
         <SectionHeader title={infoData.title} subtitle={infoData.subtitle}/>
         <SectionTabs tabNames={tabNames} tabClick={tabClickHandle}></SectionTabs>
         <SectionRooms rooms={infoData.dest_list?.[name]} itemWidth={'33.33333%'}/>
+        <SectionFooter name={name}/>
     </SectionV2Wrapper>
   )
 })
