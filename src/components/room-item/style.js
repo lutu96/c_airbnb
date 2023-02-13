@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ItemWrapper = styled.div`
-    width: 25%;
+    width: ${props => props.itemWidth};
     padding: 0 8px 12px;
     .cover {
         position: relative;

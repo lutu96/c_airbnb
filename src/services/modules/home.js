@@ -11,3 +11,9 @@ export const fetchHighScoreData = () => {
         url: '/home/highscore'
     })
 }
+
+export const fetchDiscountData = () => {
+    return yRequest.get({
+        url: '/home/discount'
+    })
+}
