@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-import { fetchDiscountData, fetchGoodPriceData, fetchHighScoreData } from '@/services'
+import { fetchDiscountData, fetchGoodPriceData, fetchHighScoreData, fetchRecommendData, fetchLongforData, fetchPlusData } from '@/services'
 
 export const fetchHomeDataThunk = createAsyncThunk('fetchGoodPrice',  (payload, { dispatch }) => {
     fetchGoodPriceData().then(res => {
@@ -11,7 +11,16 @@ export const fetchHomeDataThunk = createAsyncThunk('fetchGoodPrice',  (payload, 
     })
     fetchDiscountData().then(res => {
       dispatch(changeDiscountAction(res))
-    })  
+    }) 
+    fetchRecommendData().then(res => {
+      dispatch(changeRecommendInfoAction(res))
+    })
+    fetchLongforData().then(res => {
+      dispatch(changeLongforInfoAction(res))
+    })
+    fetchPlusData().then(res => {
+      dispatch(changePlusInfoAction(res))
+    })
 })
 
 
@@ -21,7 +30,10 @@ const homeSlice = createSlice({
     initialState: {
         goodPriceInfo: {},
         highScoreInfo: {},
-        discountInfo: {}
+        discountInfo: {},
+        recommendInfo: {},
+        longforInfo: {},
+        plusInfo: {}
     },
     reducers: {
       changeGoodPriceAction (state, { payload }) {
@@ -32,7 +44,16 @@ const homeSlice = createSlice({
       },
       changeDiscountAction (state, { payload }) {
         state.discountInfo = payload
-      } 
+      },
+      changeRecommendInfoAction (state, { payload}) {
+        state.recommendInfo = payload
+      },
+      changeLongforInfoAction (state, { payload }) {
+        state.longforInfo = payload
+      },
+      changePlusInfoAction (state, { payload }) {
+        state.plusInfo = payload
+      }
     },
     extraReducers: {
         // [fetchGoodPriceDataThunk.fulfilled](state, { payload }) {
@@ -41,6 +62,6 @@ const homeSlice = createSlice({
       }
 })
 
-export const { changeGoodPriceAction, changeHighScoreAction, changeDiscountAction}  = homeSlice.actions
+export const { changeGoodPriceAction, changeHighScoreAction, changeDiscountAction, changeRecommendInfoAction, changeLongforInfoAction, changePlusInfoAction }  = homeSlice.actions
 
 export default homeSlice.reducer

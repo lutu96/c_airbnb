@@ -17,3 +17,21 @@ export const fetchDiscountData = () => {
         url: '/home/discount'
     })
 }
+
+export const fetchRecommendData = () => {
+    return yRequest.get({
+        url: '/home/hotrecommenddest'
+    })
+}
+
+export const fetchLongforData = () => {
+    return yRequest.get({
+        url: '/home/longfor'
+    })
+}
+
+export const fetchPlusData = () => {
+    return yRequest.get({
+        url: '/home/plus'
+    })
+}
