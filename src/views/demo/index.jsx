@@ -1,10 +1,9 @@
 import classNames from 'classnames'
-import PropTypes from 'prop-types'
 import React, { memo, useState, useRef, useEffect } from 'react'
 import { DemoWrapper } from './style'
 
 const Demo = memo((props) => {
-    const [dots, setDots] = useState([1,2,3,4,5,6,7])
+    const [dots] = useState([1,2,3,4,5,6,7])
     const [selectIndex, setSelectIndex] = useState(0)
     const contentRef = useRef(null)
 

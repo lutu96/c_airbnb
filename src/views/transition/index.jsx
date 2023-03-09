@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types'
 import React, { memo, useState, useRef } from 'react'
 import { TransitionWrapper } from './style'
-import { Transition, CSSTransition } from 'react-transition-group'
+import { Transition } from 'react-transition-group'
 
 
 const duration = 300;

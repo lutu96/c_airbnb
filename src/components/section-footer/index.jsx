@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useMemo } from 'react'
 import { FooterWrapper } from './style'
 import IconMoreArrow from '@/assets/svg/icon-more-arrow'

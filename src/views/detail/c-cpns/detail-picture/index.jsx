@@ -1,5 +1,4 @@
 import PictureBrower from '@/base-ui/picture-brower'
-import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
 import { useSelector, shallowEqual } from 'react-redux'
 import { PictureWrapper } from './style'

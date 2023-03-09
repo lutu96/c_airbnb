@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useCallback, useEffect } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -26,7 +25,7 @@ const EntireRomms = memo((props) => {
       console.log(room)
       dispatch(changeDetailInfoAction(room))
       navigate('/detail')
-    }, [navigate])
+    }, [navigate, dispatch])
     console.log(roomList)
 
   return (

@@ -1,16 +1,14 @@
-import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
 import { FilterWrapper } from './style'
 import filterData from '@/assets/data/filter_data.json'
 import classNames from 'classnames'
-import { shallowEqual, useSelector } from 'react-redux'
+// import { shallowEqual, useSelector } from 'react-redux'
 
 const EntireFilter = memo((props) => {
 
-    const { headerConfig } = useSelector(state => ({
-        headerConfig: state => state.main.headerConfig
-    }), shallowEqual)
-    const { isFixed } = headerConfig
+    // const { headerConfig } = useSelector(state => ({
+    //     headerConfig: state => state.main.headerConfig
+    // }), shallowEqual)
 
     const [activeItems, setActiveItems]   = useState([])
     const itemClick  = (item) => {
