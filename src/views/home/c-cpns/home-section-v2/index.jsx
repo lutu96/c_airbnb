@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useState, useCallback } from 'react'
 import SectionHeader from '@/components/section-header'
 import SectionRooms from '@/components/section-rooms'
