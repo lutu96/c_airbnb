@@ -56,6 +56,7 @@ const RightWrapper = styled.div`
             width: 240px;
             border-radius: 10px;
             box-shadow: 0 0 6px rgba(0,0,0,.2);
+            background-color: #fff;
             color: #444;
             .top, .bottom {
                 padding: 10px 0;
