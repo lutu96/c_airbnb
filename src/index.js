@@ -10,18 +10,19 @@ import theme from './assets/theme'
 
 import 'normalize.css'
 import '@/assets/css/index.less'
+import 'antd/dist/antd.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   // <React.StrictMode>
-    <Suspense fallback='loading'>
       <Provider store={store}>
-        <HashRouter>
-          <ThemeProvider theme={theme}>
-            <App />
-          </ThemeProvider>
-        </HashRouter>
+        
+          <HashRouter>
+            <ThemeProvider theme={theme}>
+              <App />
+            </ThemeProvider>
+          </HashRouter>
+        
       </Provider>
-    </Suspense>
   // </React.StrictMode>
 )

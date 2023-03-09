@@ -9,7 +9,7 @@ const RightWrapper = styled.div`
         display: flex;
         align-items: center;
         margin-right: 8px;
-        color: ${props => props.theme.text.primary};
+        color: ${props => props.theme.isAlpha ? '#fff' : props.theme.text.primary};
         .btn {
             position:relative;
             padding: 12px;
@@ -26,7 +26,7 @@ const RightWrapper = styled.div`
                 transition: background-color 200ms ease;
             }
             &:hover::before {
-                background-color: #eee;
+                background-color:${props => props.theme.isAlpha ? 'rgba(255,255,255,0.3)' : 'eee'};
             }
         }
     }
@@ -38,6 +38,7 @@ const RightWrapper = styled.div`
         padding: 5px 5px 5px 12px;
         border: 1px solid ${props => props.theme.border.primary};
         border-radius: 21px;
+        background-color: ${props => props.theme.isAlpha ? '#fff' : 'transparent'};
         cursor: pointer;
         ${props => props.theme.mixin.boxShadow}
         .dir {
